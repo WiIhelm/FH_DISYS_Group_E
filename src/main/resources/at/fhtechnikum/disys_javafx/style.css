@@ -1,0 +1,51 @@
+/* style.css */
+.root {
+    -fx-font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -fx-background-color: #f5f5f7;
+    -fx-padding: 20;
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333;
+}
+
+.button {
+    -fx-background-color: #007aff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-background-radius: 20; /* Runde Ecken */
+    -fx-border-radius: 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0, 0, 2);
+    -fx-transition: all 0.2s ease;
+}
+
+.button:hover {
+    -fx-background-color: #005bb5;
+}
+
+.button:pressed {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 2); /* Schatten beim Klicken */
+    -fx-background-color: #004a99; /* Dunklere Farbe beim Klicken */
+}
+
+.date-picker, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d6;
+    -fx-border-radius: 8;
+    -fx-padding: 5;
+}
+
+.grid-pane {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d6;
+    -fx-border-radius: 8;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+.vbox {
+    -fx-spacing: 20;
+}
