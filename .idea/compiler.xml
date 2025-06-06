@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="UsageService" />
+        <module name="shared-models" />
+        <module name="echo-service" />
+        <module name="EnergyUser" />
+        <module name="CPS" />
+        <module name="EnergyProducer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="echo-service (1)" target="17" />
+      <module name="echo-service (2)" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
