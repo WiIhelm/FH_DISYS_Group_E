@@ -1,6 +1,7 @@
-package at.fhtechnikum.disys_javafx;
+package at.fhtechnikum.disys_restapi;
 
 import org.springframework.web.bind.annotation.*;
+
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -20,12 +21,9 @@ public class DataController {
     }
 
     @GetMapping("/historic")
-    public List<HistoricData> getHistoricData(
-            @RequestParam String start,
-            @RequestParam String end
-    ) {
-        LocalDateTime startTime = LocalDateTime.parse(start);
-        LocalDateTime endTime = LocalDateTime.parse(end);
-        return dataService.getHistoricData(startTime, endTime);
+    public List<HistoricData> getHistoricData(@RequestParam(required = false) String start,
+                                              @RequestParam(required = false) String end) {
+        return dataService.getHistoricData(start != null ? LocalDateTime.parse(start) : null,
+                end != null ? LocalDateTime.parse(end) : null);
     }
 }

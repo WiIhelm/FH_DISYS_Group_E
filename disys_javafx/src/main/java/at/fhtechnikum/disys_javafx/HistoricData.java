@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class HistoricData {
 
-    @JsonProperty
+    @JsonProperty("communityProduced")
     private double produced;
 
-    @JsonProperty
+    @JsonProperty("communityUsed")
     private double used;
 
-    @JsonProperty
+    @JsonProperty("gridUsed")
     private double gridUsed;
 
     public HistoricData() {

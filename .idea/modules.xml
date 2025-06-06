@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DisSplit.iml" filepath="$PROJECT_DIR$/.idea/DisSplit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-services/CurrentPercentageService/CurrentPercentageService.iml" filepath="$PROJECT_DIR$/rabbitmq-services/CurrentPercentageService/CurrentPercentageService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DISYS_final_git.iml" filepath="$PROJECT_DIR$/DISYS_final_git.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-services/EnergyProducer/EnergyProducer.iml" filepath="$PROJECT_DIR$/rabbitmq-services/EnergyProducer/EnergyProducer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-services/EnergyUser/EnergyUser.iml" filepath="$PROJECT_DIR$/rabbitmq-services/EnergyUser/EnergyUser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-services/UsageService/UsageService.iml" filepath="$PROJECT_DIR$/rabbitmq-services/UsageService/UsageService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/disys_restapi/disys_restapi.iml" filepath="$PROJECT_DIR$/disys_restapi/disys_restapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rabbitmq-services/shared-models/shared-models.iml" filepath="$PROJECT_DIR$/rabbitmq-services/shared-models/shared-models.iml" />
     </modules>
   </component>
 </project>

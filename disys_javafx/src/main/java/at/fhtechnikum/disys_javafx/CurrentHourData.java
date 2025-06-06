@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CurrentHourData {
 
-    @JsonProperty
+    @JsonProperty("communityDepleted")
     private double communityPool;
 
-    @JsonProperty
+    @JsonProperty("gridPortion")
     private double gridPortion;
 
     public CurrentHourData() {

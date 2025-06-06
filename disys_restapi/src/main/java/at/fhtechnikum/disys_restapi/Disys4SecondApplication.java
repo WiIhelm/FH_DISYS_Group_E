@@ -1,4 +1,4 @@
-package at.fhtechnikum.disys_javafx;
+package at.fhtechnikum.disys_restapi;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.SpringApplication;

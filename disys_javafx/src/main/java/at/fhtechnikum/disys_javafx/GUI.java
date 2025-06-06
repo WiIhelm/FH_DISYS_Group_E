@@ -96,6 +96,7 @@ public class GUI extends Application {
         Scene scene = new Scene(mainLayout, 950, 650);
         scene.getStylesheets().add(getClass().getResource("/at/fhtechnikum/disys_javafx/style.css").toExternalForm());
         stage.setTitle("Energy Usage Dashboard");
+        stage.getIcons().add(new Image(getClass().getResource("/at/fhtechnikum/disys_javafx/pika_sprite.png").toExternalForm()));
         stage.setScene(scene);
         stage.show();
     }
@@ -116,8 +117,10 @@ public class GUI extends Application {
             if (startDatePicker.getValue() != null && endDatePicker.getValue() != null &&
                     startTimeComboBox.getValue() != null && endTimeComboBox.getValue() != null) {
 
-                String start = startDatePicker.getValue() + "T" + startTimeComboBox.getValue();
-                String end = endDatePicker.getValue() + "T" + endTimeComboBox.getValue();
+                String startTime = startTimeComboBox.getValue() + ":00";
+                String endTime = endTimeComboBox.getValue() + ":00";
+                String start = startDatePicker.getValue() + "T" + startTime;
+                String end = endDatePicker.getValue() + "T" + endTime;
 
                 RestTemplate restTemplate = new RestTemplate();
                 String url = "http://localhost:8080/api/historic?start=" + start + "&end=" + end;
