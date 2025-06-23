@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="UsageService" />
+        <module name="EnergyProducer (1)" />
+        <module name="EnergyProducer (2)" />
+        <module name="disys_javafx" />
+        <module name="DBSetupFlyway" />
+        <module name="CPS" />
+        <module name="disys_restapi" />
         <module name="shared-models" />
         <module name="echo-service" />
-        <module name="EnergyUser" />
-        <module name="CPS" />
-        <module name="EnergyProducer" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="echo-service (1)" target="17" />
-      <module name="echo-service (2)" target="17" />
-    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DBSetupFlyway" options="-parameters" />
+      <module name="disys_restapi" options="-parameters" />
+    </option>
   </component>
 </project>

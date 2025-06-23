@@ -64,7 +64,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>at.fhtechnikum.echo.EchoServiceApplication</mainClass>
+                    <mainClass>at.fhtechnikum.echo.UsageServiceApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>

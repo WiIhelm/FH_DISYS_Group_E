@@ -9,7 +9,7 @@ import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 
 import java.util.Random;
 
-public class Main {
+public class CommunityEnergyUserMain {
     public static void main(String[] args) throws InterruptedException {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory("localhost");
         connectionFactory.setUsername("guest");
@@ -19,16 +19,14 @@ public class Main {
         template.setMessageConverter(new Jackson2JsonMessageConverter());
         Queue queue = new Queue("echo.usage");
 
-        WeatherService weatherService = new WeatherService();
         Random random = new Random();
 
         while (true) {
-            boolean sunny = weatherService.isSunny();
-            int kWh = sunny ? 80 + random.nextInt(40) : 20 + random.nextInt(40);
+            int kWh = 5 + random.nextInt(50);
 
-            ProducerMessage producerMessage = new ProducerMessage(kWh);
+            ConsumerMessage consumerMessage = new ConsumerMessage(kWh);
 
-            EchoMessage echoMessage = new EchoMessage(producerMessage.toString());
+            EchoMessage echoMessage = new EchoMessage(consumerMessage.toString());
 
             template.convertAndSend("echo.processing.exchange", queue.getName(), echoMessage);
             System.out.println("Gesendet: " + echoMessage.getMessage());

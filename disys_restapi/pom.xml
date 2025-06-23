@@ -73,7 +73,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
-          <mainClass>at.fhtechnikum.disys_restapi.Disys4SecondApplication</mainClass>
+          <mainClass>at.fhtechnikum.disys_restapi.RestAPIApplication</mainClass>
         </configuration>
       </plugin>
 
