@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EnergyProducer (1)" />
         <module name="EnergyProducer (2)" />
+        <module name="UsageService" />
         <module name="disys_javafx" />
         <module name="DBSetupFlyway" />
         <module name="CPS" />

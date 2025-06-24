@@ -1,5 +1,5 @@
 
-package at.fhtechnikum.producer;
+package at.technikum.energyuser;
 
 import at.fhtechnikum.shared.EchoMessage;
 import org.springframework.amqp.core.Queue;

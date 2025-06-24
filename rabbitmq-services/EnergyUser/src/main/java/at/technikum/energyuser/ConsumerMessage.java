@@ -1,4 +1,4 @@
-package at.fhtechnikum.producer;
+package at.technikum.energyuser;
 
 // ProducerMessage.java
 public class ConsumerMessage {
