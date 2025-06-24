@@ -46,6 +46,8 @@ Displays current and historical energy data using the REST API. Allows users to 
 5. **Launch the JavaFX GUI**  
    Start the GUI client to view current and historical energy data.
 
+💡 **Note:** If opening the entire repository in IntelliJ causes issues, try opening each component (folder) as a separate IntelliJ project.
+
 ---
 
 ## 🗺️ Data Flow Summary
