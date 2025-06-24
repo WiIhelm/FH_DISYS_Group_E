@@ -31,7 +31,9 @@ public class CommunityEnergyUserMain {
             template.convertAndSend("echo.processing.exchange", queue.getName(), echoMessage);
             System.out.println("Gesendet: " + echoMessage.getMessage());
 
-            Thread.sleep(10000);
+            int sleepTime = (random.nextInt(5) + 1) * 1000;   // seconds from 1 to 5
+            System.out.println(sleepTime);
+            Thread.sleep(sleepTime);
         }
     }
 }
