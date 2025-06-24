@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/DBSetupFlyway/pom.xml" />
         <option value="$PROJECT_DIR$/disys_restapi/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq-services/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>

@@ -13,7 +13,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>echo-service</artifactId>
+    <artifactId>UsageService</artifactId>
 
     <dependencies>
         <dependency>
