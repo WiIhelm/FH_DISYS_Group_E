@@ -11,8 +11,8 @@
     <groupId>at.fh-technikum</groupId>
     <artifactId>DBSetupFlyway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>disys4_second</name>
-    <description>disys4_second</description>
+    <name>FlywaySetup</name>
+    <description>FlywaySetup</description>
     <url/>
     <licenses>
         <license/>
