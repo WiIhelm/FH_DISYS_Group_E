@@ -26,6 +26,28 @@ Displays current and historical energy data using the REST API. Allows users to 
 
 ---
 
+## ▶️ How to Start
+
+1. **Start the infrastructure**  
+   Launch PostgreSQL and RabbitMQ using Docker.
+
+2. **Run database setup**  
+   Use Flyway to initialize the database schema and tables.
+
+3. **Start the REST API**  
+   Launch the Spring Boot REST API to make data accessible.
+
+4. **Start RabbitMQ-based services (in this order):**  
+   - Current Percentage Service  
+   - Usage Service  
+   - Energy Producer Service  
+   - Energy User Service  
+
+5. **Launch the JavaFX GUI**  
+   Start the GUI client to view current and historical energy data.
+
+---
+
 ## 🗺️ Data Flow Summary
 
 Producers and users send data → Usage Service updates DB → Percentage Service recalculates stats → REST API serves the data → GUI displays it.
