@@ -4,6 +4,63 @@ A modular system simulating a local energy-sharing community, where producers an
 
 ---
 
+## ▶️ How to Start the Project
+
+### 1. ✅ Start RabbitMQ & PostgreSQL
+Launch **RabbitMQ** and **PostgreSQL** using Docker.
+* Ensure the following ports are free before starting:
+  * `5672` → RabbitMQ
+  * `5432` → PostgreSQL
+
+### 2. 🗄️ Database Setup with Flyway
+If this is the first time running the project:
+* Flyway will **automatically apply the initial schema** and create the required tables on application startup.
+* No manual DB setup required.
+
+### 3. 🚀 Start the REST API Application
+The **RestAPIApplication** handles:
+* Real-time and historical dataset serving
+* Filtered data queries
+  
+📁 (If necessary) Navigate to:
+`disys_restapi/src/main/java/at/fhtechnikum/disys_restapi`
+Run the `RestAPIApplication.java` file.
+
+### 4. 🔁 Start RabbitMQ-Based Services
+Start the following applications in **this order**:
+1. `CPSApplication`
+2. `UsageServiceApplication`
+3. `CommunityEnergyProducerMain`
+4. `CommunityEnergyUserMain`
+
+These services rely on RabbitMQ to communicate and exchange data.
+
+### 5. 🖥️ Start the JavaFX GUI Application
+
+📁 Navigate to:
+`disys_javafx_project/src/main/java/at/fhtechnikum/disys_javafx`
+Run `GUIApplication.java`.
+
+This launches the main interface for interacting with the system.
+
+---
+
+### 💡 Tips & Troubleshooting
+
+* **IntelliJ Performance Tip:**
+  If opening the entire repository causes performance issues or slow indexing, try opening each **subproject (folder)** as a **separate IntelliJ project**.
+
+* **Flyway Errors?**
+  Ensure the database is clean or has been properly reset before restarting services.
+
+---
+
+## 🗺️ Data Flow Summary
+
+Producers and users send data → Usage Service updates DB → Percentage Service recalculates stats → REST API serves the data → GUI displays it.
+
+---
+
 ## 🧩 Components
 
 ### 1. Community Energy Producer  
@@ -25,31 +82,3 @@ Provides read-only endpoints to fetch current and historical energy statistics. 
 Displays current and historical energy data using the REST API. Allows users to visually monitor the energy distribution over time.
 
 ---
-
-## ▶️ How to Start
-
-1. **Start the infrastructure**  
-   Launch PostgreSQL and RabbitMQ using Docker.
-
-2. **Run database setup**  
-   Use Flyway to initialize the database schema and tables.
-
-3. **Start the REST API**  
-   Launch the Spring Boot REST API to make data accessible.
-
-4. **Start RabbitMQ-based services (in this order):**  
-   - Current Percentage Service  
-   - Usage Service  
-   - Energy Producer Service  
-   - Energy User Service  
-
-5. **Launch the JavaFX GUI**  
-   Start the GUI client to view current and historical energy data.
-
-💡 **Note:** If opening the entire repository in IntelliJ causes issues, try opening each component (folder) as a separate IntelliJ project.
-
----
-
-## 🗺️ Data Flow Summary
-
-Producers and users send data → Usage Service updates DB → Percentage Service recalculates stats → REST API serves the data → GUI displays it.
